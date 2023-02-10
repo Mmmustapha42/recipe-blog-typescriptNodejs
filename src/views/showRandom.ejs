@@ -1,0 +1,15 @@
+<h1>Random Recipes</h1>
+
+
+<div class="row row-cols-lg-5 g-2 g-lg-3">
+    <% if (typeof random != "") { %>
+            <a href="/recipe/<%=random._id %> " class="col text-center category__link">
+                <div class="category__img shadow">
+                    <img src="uploads/<%=random.image %> " height="250" alt="<%=random.name %> " loading="lazy">
+                </div>
+                <div class="pt-1"><%=random.name %> </div>
+        <% } else { %>
+         <p>No Items Found</p>
+    <% } %>
+    </a>
+</div>

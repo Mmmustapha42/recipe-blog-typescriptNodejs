@@ -1,0 +1,26 @@
+<h1>Explore Categories</h1>
+
+<h1 class="pb-4">Explore Categories</h1>
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Explore Categories</li>
+    </ol>
+  </nav>
+  
+
+
+<div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mb-4">
+    <%if (typeof category !== 'undefined' && category.length > 0) { %>
+        <%category.forEach(element => { %>
+            <a href="/categories/<%-element.name  %> " class="col text-center category__link">
+                <div class="category__img shadow">
+                    <img src="/uploads/<%- element.image %> "  alt="<%- element.image %> " loading="lazy">
+                </div>
+                <div class="pt-1"><%- element.image %> </div>
+            </a>
+        <%}) %>    
+    <% } %>
+</div>
+    
